@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Trigger Rates Covariance Matrix</title>
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+ <script src="https://d3js.org/d3.v2.js"></script>
+</head>
+
+<body>
+<h1><b>Trigger Rates</b> Covariance</h1>
+
+<form>
+<b>
+  Preprocessing: 
+</b>
+ <input type="checkbox" name="rm" value="1" id="rm">
+ <label for="rm" style="margin-right: 20px">
+     Require modeling
+ </label>
+ <input type="checkbox" name="fd" value="1" id="fd">
+ <label for="rm" style="margin-right: 20px">
+     First differences
+ </label>
+ <input type="checkbox" name="lr" value="1" id="lr">
+ <label for="rm" style="margin-right: 20px">
+     Link relatives
+ </label>
+ <input type="submit" value="Reload" style="margin-right: 20px">
+
+Show: <select id="cluster">
+  <option value="name" selected="selected">by Name</option>
+  <option value="cluster">by Cluster</option>
+</select>
+</form>
+
+<aside id="details"></aside>
+
+<script src="js/matrix.js"></script>
+
+<div id="legend"></div>
+</body>
+<html>

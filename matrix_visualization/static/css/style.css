@@ -1,0 +1,61 @@
+@import url(//fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b);
+
+body {
+  color: #555555;
+  font-family: "PT Serif", serif;
+  margin: 1em auto 4em auto;
+  width: 1040px;
+}
+
+h1 {
+  color: #000;
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin: .3em 0 .1em 0;
+  text-rendering: optimizeLegibility;
+}
+
+form {
+  font-size: small;
+  float: left;
+  margin-right: .5em;
+  width: 100%;
+}
+
+form:after {
+  padding-left: .5em;
+}
+
+aside {
+  margin-top: 400px;
+  right: 200px;
+  font-size: small;
+  position: absolute;
+  width: 180px;
+}
+
+.attribution {
+  font-size: small;
+  margin-bottom: 2em;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  width: 690px;
+  margin-left: 30px;
+}
+
+svg {
+  font: 6px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
