@@ -1,3 +1,8 @@
+d3.select("#fraction").on("input", function() { 
+    d3.select("#fractionValue").text(parseInt(+this.value/10)*10+"%");
+    document.getElementById("frac").value = parseInt(+this.value/10)*10;
+});
+
 var margin = {top: 300, right: 0, bottom: 0, left: 300},
     width = 960,
     height = width,
@@ -25,13 +30,15 @@ var colorMapPositive = d3.scale.linear()
 	.range([colorNeutral, colorPositive]);
 
 var url = new URL (window.location.href);
-var rm = url.searchParams.get("rm") | "0";
-var fd = url.searchParams.get("fd") | "0";
-var lr = url.searchParams.get("lr") | "0";
+var rm = url.searchParams.get("rm") || "0";
+var fd = url.searchParams.get("fd") || "0";
+var lr = url.searchParams.get("lr") || "0";
+var frac = url.searchParams.get("frac") || 100;
 
-var load_file = "data/data" + rm + fd + lr + ".json";
+d3.select("#fractionValue").text(parseInt(+frac/10)*10+"%");
+document.getElementById("frac").value = parseInt(+frac/10)*10;
 
-console.log("Trying to load: " + load_file);
+var load_file = "data/data" + rm + fd + lr + "frac" + frac.toString() + ".json";
 
 d3.json(load_file, function(data) {
     

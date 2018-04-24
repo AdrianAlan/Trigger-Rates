@@ -5,10 +5,20 @@
  <title>Trigger Rates Covariance Matrix</title>
  <link rel="stylesheet" type="text/css" href="css/style.css">
  <script src="https://d3js.org/d3.v2.js"></script>
+
+
 </head>
 
 <body>
 <h1><b>Trigger Rates</b> Covariance</h1>
+
+<p>
+  <label for="fraction" 
+         style="display: inline-block; width: 100px; text-align: right">
+         Fill fraction: <span id="fractionValue">100%</span>
+  </label>
+  <input type="range" min="0" max="100" id="fraction">
+</p>
 
 <form>
 <b>
@@ -32,6 +42,7 @@ Show: <select id="cluster">
   <option value="name" selected="selected">by Name</option>
   <option value="cluster">by Cluster</option>
 </select>
+<input id="frac" name="frac" type="hidden" value="100" />
 </form>
 
 <aside id="details"></aside>
