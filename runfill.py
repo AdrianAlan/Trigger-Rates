@@ -11,11 +11,11 @@ for fill in range(MIN_FILL, MAX_FILL + 1):
     query = ("select * from wbm.runs r where r.lhcfill = %s" % fill)
     response = api.csv(query)
 
-    with open('tmp.csv', 'w') as file:
+    with open("tmp.csv", "w") as file:
         file.write(response)
-    df = pd.read_csv('tmp.csv')
+    df = pd.read_csv("tmp.csv")
 
     lhcFills = {}
     for _, row in df.iterrows():
-        with open('lhcFills.csv', 'a+') as file:
+        with open("./data/lhc_fills.csv", "a+") as file:
             file.write("%s, %s \n" % (row["RUNNUMBER"], fill))
